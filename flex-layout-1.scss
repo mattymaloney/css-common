@@ -11,6 +11,7 @@ $gutter-size: 1rem;
 .flexcell {
   flex: 1 1;
   
+  /*
   &.flexrow {
     flex-direction: row;
     > .flexcell ~ .flexcell {
@@ -23,5 +24,20 @@ $gutter-size: 1rem;
     > .flexcell ~ .flexcell {
       margin-top: $gutter-size;
     }
+  }
+  */
+}
+
+.flexrow {
+  flex-direction: row;
+  > .flexcell ~ .flexcell {
+    margin-left: $gutter-size;
+  }
+}
+
+.flexcol {
+  flex-direction: column;
+  > .flexcell ~ .flexcell {
+    margin-top: $gutter-size;
   }
 }
