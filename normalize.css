@@ -1,0 +1,74 @@
+
+/* box-model normalizer
+ ************************/
+html { box-sizing: border-box; }
+*, *:after, *:before { box-sizing: inherit; }
+/**/
+
+/* body/html font and size normalizer
+ **********************************/
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: Verdana;
+}
+/**/
+
+/* font and padding normalizer
+ *************************************/
+*, *:after, *:before {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+/**/
+
+/* margin between paragraphs and
+ * any adjacent content
+ ******************************/
+* + p,
+p + * {
+  margin: 1em 0 0 0;
+}
+/**/
+
+
+/* make inline code text look like code
+ * similar to how it looks on stackexchange sites
+ *********************************************************/
+code {
+  background: lightgray;
+  font-family: Monaco;
+}
+/**/
+
+
+/* normalize the button element
+ **********************************/
+button {
+  /* appearance: button; */
+  border: .2em lightgray outset;
+  border-radius: .2em;
+  padding: .3em .6em;
+  background: #ddd;
+}
+
+button:active {
+  border-style: inset;
+}
+
+/* normalize text input elements 
+ * TODO - apply this to password, email, etc text elements
+ *********************************/
+input:not([type]),
+input[type="text"] {
+  border: .2em lightgray solid;
+  padding: .3em .6em;
+  border-radius: .2em;
+}
