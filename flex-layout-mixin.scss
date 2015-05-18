@@ -70,4 +70,14 @@
     @extend .flexcell-skinny;
     @extend .flexrow;
   }
+
+  /* define .flexleaf as an alias for .flexcell:not(.flexbox)
+   * which allows styling arbitrary childless flexcells 
+   **********************************************************/
+  .flexcell:not(.flexbox) {
+    @extend .flexleaf;
+  }
+  .flexleaf {}
+  /**/
+  
 }
