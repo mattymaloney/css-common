@@ -1,0 +1,73 @@
+@mixin flex-layout($gutter-size: 1rem) {
+  
+  .flexgutter {
+    padding: $gutter-size;
+  }
+
+  .flexgroup {
+  }
+
+  .flexgroup-fullheight {
+    //@extend .flexgroup;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  .flexgroup-fullwidth {
+    //@extend .flexgroup;
+    width: 100%;
+  }
+
+  .flexgroup-fullsize {
+    @extend .flexgroup-fullheight;
+    @extend .flexgroup-fullwidth;
+  }
+
+  .flexbox {
+    display: flex;
+  }
+
+  .flexgroup-fullheight > .flexbox {
+    height: 100%;
+  }
+
+  .flexcell {
+    flex: 1 1;
+  }
+
+  .flexrow {
+    @extend .flexbox;
+    flex-direction: row;
+    > .flexcell ~ .flexcell {
+      margin-left: $gutter-size;
+    }
+  }
+
+  .flexcol {
+    @extend .flexbox;
+    flex-direction: column;
+    > .flexcell ~ .flexcell {
+      margin-top: $gutter-size;
+    }
+  }
+
+  /* flex-skinny should make its elements
+     as skinny (vertically or horizontally,
+     depending on flex-direction) as possible
+     with size no larger than necessary to fit
+     its content. */
+  .flex-skinny {
+    flex: none;
+  }
+
+  .flexcell-skinny {
+    @extend .flexcell;
+    @extend .flex-skinny;
+  }
+
+  .flexcell-footer,
+  .flexcell-header {
+    @extend .flexcell-skinny;
+    @extend .flexrow;
+  }
+}
