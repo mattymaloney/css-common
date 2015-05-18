@@ -77,7 +77,10 @@
   .flexcell:not(.flexbox) {
     @extend .flexleaf;
   }
-  .flexleaf {}
+  .flexleaf {
+    color: inherit; // bogus filler rule to avoid 
+                    // empty ruleset when @extended.
+  }
   /**/
   
 }
