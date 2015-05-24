@@ -39,8 +39,20 @@ body {
 
 /* margin between paragraphs and
  * any adjacent content
+ *
+ * knowing that we're using the ResizeSensor, we should be able to hide
+ * the top margin on our first paragraph that's only appearing because 
+ * of the extra div that's inserted by the ResizeSensor.
+ */
  ******************************/
+/*
 * + p,
+p + * {
+  margin: 1em 0 0 0;
+}
+* + p { margin: 0; }
+*/
+*:not([class="resize-sensor"]) + p,
 p + * {
   margin: 1em 0 0 0;
 }
