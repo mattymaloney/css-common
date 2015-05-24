@@ -18,7 +18,8 @@ html, body {
 }
 /**/
 
-/* font and padding normalizer
+/* font and padding normalizer for all 
+ * other elements.
  *************************************/
 *, *:after, *:before {
   padding: 0;
@@ -26,6 +27,7 @@ html, body {
   margin: 0;
   font-size: inherit;
   font-family: inherit;
+  color: inherit;
 }
 /**/
 
