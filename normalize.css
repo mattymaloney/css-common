@@ -16,6 +16,12 @@ html, body {
   font-size: 16px;
   font-family: Verdana;
 }
+
+body {
+  color: black;
+  background: white;
+  margin: 0.5em;
+}
 /**/
 
 /* font and padding normalizer for all 
